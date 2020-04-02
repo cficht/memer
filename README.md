@@ -41,8 +41,8 @@ Movie model and routes, a Game model and routes, etc.
 [X] Meme model
 [X] Data helper
 [X] Seed data
-[] memes post route
-[] memes get route
+[X] memes post route
+[X] memes get route
 [] memes get by id route
 [] memes put route
 [] memes delete route
