@@ -43,7 +43,7 @@ Movie model and routes, a Game model and routes, etc.
 [X] Seed data
 [X] memes post route
 [X] memes get route
-[] memes get by id route
+[X] memes get by id route
 [] memes put route
 [] memes delete route
 [] put in url/CORS fix
