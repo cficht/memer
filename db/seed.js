@@ -3,7 +3,14 @@ const chance = require('chance').Chance();
 const getMemes = require('../lib/services/random-memes');
 
 module.exports = async({ memesToCreate = 100 } = {}) => {
-  const memes = await getMemes();
+  let memes;
+  try {
+    memes = await getMemes();
+  } catch(e) {
+    memes = [...Array(memesToCreate)].map(() => ({ name: chance.animal(), url: chance.url() }));
+  }
+
+  // const memes = await getMemes();
   await Meme.create([...Array(memesToCreate)].map((tag, index) => ({
     top: memes[index].name,
     image: memes[index].url,
