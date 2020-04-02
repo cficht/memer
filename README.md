@@ -45,8 +45,8 @@ Movie model and routes, a Game model and routes, etc.
 [X] memes get route
 [X] memes get by id route
 [X] memes put route
-[] memes delete route
-[] put in url/CORS fix
+[X] memes delete route
+[X] put in url/CORS fix
 [] extra resource 1 model
 [] extra resource 1 routes
 [] extra resource 2 model
