@@ -10,11 +10,9 @@ module.exports = async({ memesToCreate = 100 } = {}) => {
     memes = [...Array(memesToCreate)].map(() => ({ name: chance.animal(), url: chance.url() }));
   }
 
-  // const memes = await getMemes();
   await Meme.create([...Array(memesToCreate)].map((tag, index) => ({
     top: memes[index].name,
     image: memes[index].url,
     bottom: chance.sentence()
   })));
 };
-
