@@ -42,4 +42,18 @@ describe('memes routes', () => {
       });
   });
 
+  it('updates a meme', async() => {
+    const meme = await getMeme();
+    return request(app)
+      .put(`/api/v1/memes/${meme._id}`)
+      .send({ top: 'This is actually better', bottom: 'Yeah' })
+      .then(res => {
+        expect(res.body).toEqual({
+          ...meme,
+          top: 'This is actually better',
+          bottom: 'Yeah'
+        });
+      });
+  });
+
 });
